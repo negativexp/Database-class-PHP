@@ -56,7 +56,7 @@ class Database {
             return $result;
         }
 
-        $success = ($stmt->affected_rows > 0) ? true : false;
+        $success = $stmt->affected_rows > 0;
         $stmt->close();
         return $success;
     }

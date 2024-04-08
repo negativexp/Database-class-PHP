@@ -25,8 +25,8 @@ Example #1
 $db = new Database();
 $sql = "DELETE FROM contact_forms WHERE id = ?";
 $params = [$_GET["deleteID"]];
-if(!$db->executeQuery($sql, $params, false)) {
-   echo "Chyba při mazání!";
+if($db->executeQuery($sql, $params, false)) {
+   echo "Success!";
 }
 ```
 Example #2
